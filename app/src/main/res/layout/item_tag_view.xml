@@ -12,6 +12,7 @@
         android:background="@color/activity_bg" />
 
     <View
+        android:id="@+id/lineView1"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#C9CBCB"

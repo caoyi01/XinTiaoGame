@@ -85,6 +85,7 @@ public class GameAdapter extends BaseAdapter {
                             .findViewById(R.id.nameTagTv);
                     holder1.rightTagTv = (TextView) convertView
                             .findViewById(R.id.rightTagTv);
+                    holder1.lineView = convertView.findViewById(R.id.lineView1);
                     convertView.setTag(holder1);
                     break;
                 case TYPE_2:
@@ -119,6 +120,10 @@ public class GameAdapter extends BaseAdapter {
             case TYPE_1:
                 holder1.nameTagTv.setText(entity.getTagName());
                 holder1.rightTagTv.setText(entity.getTagRight());
+                if (entity.isHasLineView())
+                    holder1.lineView.setVisibility(View.VISIBLE);
+                else
+                    holder1.lineView.setVisibility(View.INVISIBLE);
                 break;
             case TYPE_2:
                 holder2.desTv.setText(entity.getAppsum());
@@ -138,6 +143,7 @@ public class GameAdapter extends BaseAdapter {
     public class ViewHolder1 {
         TextView nameTagTv;
         TextView rightTagTv;
+        View lineView;
     }
 
     public class ViewHolder2 {

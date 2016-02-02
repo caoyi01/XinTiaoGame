@@ -58,7 +58,12 @@
 
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="app_detail_rating_bar" parent="@android:style/Widget.RatingBar">
+    <style name="app_detail_rating_bar" parent="@android:style/Widget.Holo.RatingBar.Small">
         <item name="android:progressDrawable">@drawable/layer_rating_drawable</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/fab_white</item>
     </style>
 </resources>

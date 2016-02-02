@@ -257,6 +257,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener, 
         gameEntity1.setTagName("每日推荐");
         gameEntity1.setTagRight("换一换");
         gameEntity1.setType(0);
+        gameEntity1.setHasLineView(false);
         infos.add(gameEntity1);
         GameEntity gameEntity11 = new GameEntity();
         gameEntity11.setType(1);
@@ -271,6 +272,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener, 
         gameEntity21.setTagName("抢先体验");
         gameEntity21.setTagRight("更多");
         gameEntity21.setType(0);
+        gameEntity21.setHasLineView(true);
         infos.add(gameEntity21);
 
         for (int i = 0; i < 2; i++) {
@@ -294,6 +296,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener, 
         gameEntity31.setTagName("热门游戏");
         gameEntity31.setTagRight("更多");
         gameEntity31.setType(0);
+        gameEntity31.setHasLineView(true);
         infos.add(gameEntity31);
 
         for (int i = 0; i < 10; i++) {

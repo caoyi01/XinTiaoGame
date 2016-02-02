@@ -7,4 +7,9 @@
     <color name="activity_bg">#EEEEEE</color>
     <color name="main_tab_select">#44A4F3</color>
     <color name="main_tab_default">#252525</color>
+
+    <color name="fab_white">#fafafa</color>
+    <color name="fab_white_pressed">#f1f1f1</color>
+    <color name="fab_half_black">#808080</color>
+    <color name="fab_black_semi_transparent">#B2000000</color>
 </resources>

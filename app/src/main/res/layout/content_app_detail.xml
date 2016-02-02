@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,6 +16,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/titleToolbarRl"
         android:scrollbars="none">
 
         <LinearLayout
@@ -83,7 +85,7 @@
                     android:id="@+id/ratingRb"
                     style="@style/app_detail_rating_bar"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="9dp"
                     android:layout_alignBottom="@+id/iconIv"
                     android:layout_marginTop="5dp"
                     android:layout_toRightOf="@+id/iconIv"
@@ -91,23 +93,6 @@
                     android:numStars="5"
                     android:rating="4" />
 
-                <LinearLayout
-                    android:id="@+id/editLl"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="11dp"
-                    android:background="@drawable/shape_download_imageview"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="4dp"
-                        android:background="@drawable/icon_edit"
-                        android:contentDescription="@string/app_name" />
-                </LinearLayout>
             </RelativeLayout>
 
             <ImageView
@@ -231,4 +216,60 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <com.cy.xintiao.game.ui.view.fab.FloatingActionsMenu
+        android:id="@+id/editFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titleToolbarRl"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="32.5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:fab_addButtonSize="mini"
+        fab:fab_addButtonColorNormal="@color/fab_white"
+        fab:fab_addButtonColorPressed="@color/fab_white_pressed"
+        fab:fab_addButtonPlusIconColor="@color/fab_half_black"
+        fab:fab_expandDirection="down"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.cy.xintiao.game.ui.view.fab.FloatingActionButton
+            android:id="@+id/desFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="简介"
+            fab:fab_colorNormal="@color/fab_white"
+            fab:fab_colorPressed="@color/fab_white_pressed" />
+
+        <com.cy.xintiao.game.ui.view.fab.FloatingActionButton
+            android:id="@+id/giftFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="礼包"
+            fab:fab_colorNormal="@color/fab_white"
+            fab:fab_colorPressed="@color/fab_white_pressed" />
+
+        <com.cy.xintiao.game.ui.view.fab.FloatingActionButton
+            android:id="@+id/syncFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="同步到电脑"
+            fab:fab_colorNormal="@color/fab_white"
+            fab:fab_colorPressed="@color/fab_white_pressed" />
+
+        <com.cy.xintiao.game.ui.view.fab.FloatingActionButton
+            android:id="@+id/downloadFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="下载"
+            fab:fab_colorNormal="@color/fab_white"
+            fab:fab_colorPressed="@color/fab_white_pressed" />
+
+    </com.cy.xintiao.game.ui.view.fab.FloatingActionsMenu>
+</RelativeLayout>

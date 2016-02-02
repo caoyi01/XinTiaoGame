@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:context="com.cy.xintiao.game.ui.fragment.GameFragment">
+
+    <com.cy.xintiao.game.ui.view.refresh.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gamePtrView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_bg"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <ListView
+            android:id="@+id/gameLv"
+            style="@style/listViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.cy.xintiao.game.ui.view.refresh.PtrClassicFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchRl"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/search_background_shape">
+
+        <LinearLayout
+            android:id="@+id/searchLl"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/icon_search_normal" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="44dp"
+            android:background="@null"
+            android:editable="false"
+            android:gravity="center_vertical"
+            android:hint="您想搜什么游戏呢？"
+            android:singleLine="true"
+            android:textColor="#252525"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/codeLl"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/selector_code_drawable" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchIconRl"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/search_background_shape"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_search_click" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cy.xintiao.game.ui.activity.ClassifyActivity"
+    tools:showIn="@layout/activity_classify">
+
+    <include layout="@layout/title_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/networkGameRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/networkAllRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/networkAllTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="bottom"
+                        android:paddingRight="11dp"
+                        android:text="全部"
+                        android:textColor="#44A4F3"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <View
+                        android:id="@+id/networkLine1"
+                        android:layout_width="10dp"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:background="#61AFE3" />
+
+                    <TextView
+                        android:id="@+id/networkTagTv"
+                        android:layout_width="76dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/networkLine1"
+                        android:background="@drawable/shape_network_game_tag"
+                        android:gravity="center"
+                        android:text="网络游戏"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/networkTagTv"
+                        android:background="#61AFE3" />
+                </RelativeLayout>
+
+                <com.cy.xintiao.game.ui.view.ClassifyTagGridLayout
+                    android:id="@+id/networkGv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/networkAllRl"
+                    android:background="@android:color/white"
+                    android:numColumns="2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/networkGv"
+                    android:background="#61AFE3" />
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/consoleGameRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/consoleAllRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/consoleAllTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="bottom"
+                        android:paddingRight="11dp"
+                        android:text="全部"
+                        android:textColor="#44A4F3"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <View
+                        android:id="@+id/consoleLine1"
+                        android:layout_width="10dp"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:background="#EC7367" />
+
+                    <TextView
+                        android:id="@+id/consoleTagTv"
+                        android:layout_width="76dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/consoleLine1"
+                        android:background="@drawable/shape_console_game_tag"
+                        android:gravity="center"
+                        android:text="单机游戏"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@+id/consoleTagTv"
+                        android:background="#EC7367" />
+                </RelativeLayout>
+
+                <com.cy.xintiao.game.ui.view.ClassifyTagGridLayout
+                    android:id="@+id/consoleGv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/consoleAllRl"
+                    android:background="@android:color/white"
+                    android:numColumns="2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/consoleGv"
+                    android:background="#EC7367" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

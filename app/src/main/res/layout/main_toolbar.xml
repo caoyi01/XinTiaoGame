@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#0CEEEEEE"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/gameLl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/gameIv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/icon_game_click"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/gameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="游戏"
+            android:textColor="@color/main_tab_select"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/searchIv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/icon_search_normal"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/searchTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="搜索"
+            android:textColor="@color/main_tab_default"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/assistLl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/assistIv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/icon_assist_normal"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/assistTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="辅助"
+            android:textColor="@color/main_tab_default"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/userLl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/userIv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/icon_me_normal"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/userTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="我的"
+            android:textColor="@color/main_tab_default"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

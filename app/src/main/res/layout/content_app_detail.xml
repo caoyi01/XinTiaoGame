@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cy.xintiao.game.ui.activity.AppDetailActivity"
+    tools:showIn="@layout/activity_app_detail">
+
+    <include layout="@layout/title_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="17.5dp">
+
+                <ImageView
+                    android:id="@+id/iconIv"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/icon_game" />
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iconIv"
+                    android:singleLine="true"
+                    android:text="变形金刚"
+                    android:textColor="#252525"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/downloadNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nameTv"
+                    android:layout_centerVertical="true"
+                    android:text="200万次下载"
+                    android:textColor="#C9CBCB"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sizeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/downloadNumTv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/downloadNumTv"
+                    android:text="200M"
+                    android:textColor="#C9CBCB"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/stateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/downloadNumTv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/sizeTv"
+                    android:text="安全"
+                    android:textColor="#C9CBCB"
+                    android:textSize="12sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingRb"
+                    style="@style/app_detail_rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@+id/iconIv"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iconIv"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4" />
+
+                <LinearLayout
+                    android:id="@+id/editLl"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dp"
+                    android:background="@drawable/shape_download_imageview"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="4dp"
+                        android:background="@drawable/icon_edit"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/bannerIv"
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="17.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+            <RelativeLayout
+                android:id="@+id/giftRl"
+                android:layout_width="match_parent"
+                android:layout_height="98dp">
+
+                <View
+                    android:id="@+id/giftLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/activity_bg" />
+
+                <TextView
+                    android:id="@+id/nameTagTv"
+                    android:layout_width="72dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@+id/giftLineView"
+                    android:layout_marginLeft="11dp"
+                    android:background="@drawable/shape_game_tag"
+                    android:gravity="center"
+                    android:text="游戏礼包"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/giftIv"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_below="@+id/nameTagTv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/icon_game" />
+
+                <TextView
+                    android:id="@+id/giftNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/giftIv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_toRightOf="@+id/giftIv"
+                    android:text="变形金刚礼包"
+                    android:textColor="#EC7376"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/giftDesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/giftIv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_toRightOf="@+id/giftIv"
+                    android:singleLine="true"
+                    android:text="游戏主界面-点击头像-点击礼包激活码中心即可"
+                    android:textColor="#252525"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@drawable/icon_back_black_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/desGiftRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/desLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/activity_bg" />
+
+                <TextView
+                    android:id="@+id/desTagTv"
+                    android:layout_width="72dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@+id/desLineView"
+                    android:layout_marginLeft="11dp"
+                    android:background="@drawable/shape_game_tag"
+                    android:gravity="center"
+                    android:text="应用介绍"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/desTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/desTagTv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="17dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaa"
+                    android:textColor="#7B7B7B"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

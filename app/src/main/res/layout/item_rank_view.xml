@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#EEEEEE" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="16.5dp"
+            android:background="@drawable/icon_game" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iconIv"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iconIv"
+            android:text="琅邪榜"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/downloadNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iconIv"
+            android:text="689万次下载"
+            android:textColor="#C9CBCB"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/downloadNumTv"
+            android:text="200M"
+            android:textColor="#C9CBCB"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/desTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iconIv"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/iconIv"
+            android:singleLine="true"
+            android:text="官方正版手游"
+            android:textColor="#7B7B7B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/downloadTv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/shape_download_button"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/giftTv"
+            android:layout_width="46dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.5dp"
+            android:layout_toLeftOf="@+id/downloadTv"
+            android:background="@drawable/shape_gift_button"
+            android:gravity="center"
+            android:text="礼包"
+            android:textColor="#EC7367"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</LinearLayout>
